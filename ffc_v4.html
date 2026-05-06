@@ -6,7 +6,8 @@
   <meta name="theme-color" content="#0a0a0f">
   <title>FFC</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"><link rel="manifest" href="manifest.json">
+``
 <style>
 /* ==============================
    VARIABLES & RESET
@@ -1274,4 +1275,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setLatSign(1);
   setRangeSign(1);
 });
-  </script></body></html>
+  </script><script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script></body></html>
