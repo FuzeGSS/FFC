@@ -1251,22 +1251,32 @@ function copyOAResult() {
 }
 
 // -------------------------------
-//   INIT DOM
-// -------------------------------
-<!-- Librairies -->
-<script src="https://unpkg.com/mgrs@1.0.0/dist/mgrs.min.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    // INIT DOM
+    // -------------------------------
+    document.addEventListener("DOMContentLoaded", () => {
+      // listeners
+      document.getElementById("obj_main").addEventListener("input", () => syncObjFields("main"));
+      document.getElementById("obj_oa").addEventListener("input", () => syncObjFields("oa"));
 
-<!-- Ton code principal -->
-<script src="app.js"></script>
+      ["posn_mor", "obj_main", "oa_mgrs", "obj_oa"].forEach(id => {
+        document.getElementById(id).addEventListener("input", e => {
+          validateInput(id, e.target.value);
+        });
+      });
 
-<!-- Service worker -->
-<script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
-}
-</script>
+      initMap();
+      renderHistory();
+      setLatSign(1);
+      setRangeSign(1);
+    });
+  </script>
+
+  <!-- ✅ Service worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
 
 </body>
 </html>
-``</body></html>
