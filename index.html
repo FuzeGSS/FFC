@@ -867,9 +867,10 @@ let lineLayer = null;
 
 function initMap() {
   map = L.map('map').setView([50.85, 4.35], 6);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
   maxZoom: 19
 }).addTo(map);
+``
 }
 
 // -------------------------------
