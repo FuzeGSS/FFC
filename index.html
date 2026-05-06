@@ -7,7 +7,7 @@
   <title>FFC</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"><link rel="manifest" href="manifest.json">
-``  
+``
 <style>
 /* ==============================
    VARIABLES & RESET
@@ -867,10 +867,9 @@ let lineLayer = null;
 
 function initMap() {
   map = L.map('map').setView([50.85, 4.35], 6);
-  L.tileLayer('tiles/{z}/{x}/{y}.png', {
-    maxZoom: 12,
-    minZoom: 4
-  }).addTo(map);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19
+}).addTo(map);
 }
 
 // -------------------------------
@@ -1272,7 +1271,8 @@ function copyOAResult() {
   </script>
 
   <!-- ✅ Service worker -->
-  <script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js");
     }
