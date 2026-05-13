@@ -1,3 +1,4 @@
+// © 2026 Duysens Florent – All rights reserved
 // -------------------------------
 //   CONSTANTES & OUTILS
 // -------------------------------
