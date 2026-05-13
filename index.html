@@ -1273,13 +1273,16 @@ function copyOAResult() {
 
   <!-- ✅ Service worker -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js");
-    }
-  </script>
+
 <footer>
   © 2026 FFC – All rights reserved
 </footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
 </body>
 </html>
