@@ -1,5 +1,6 @@
 {
   "name": "FFC",
+  "id": "/FFC/",
   "short_name": "FFC",
   "start_url": "./",
   "display": "standalone",
